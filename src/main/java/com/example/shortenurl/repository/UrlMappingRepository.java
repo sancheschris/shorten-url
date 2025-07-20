@@ -5,8 +5,7 @@ import java.util.Optional;
 import org.springframework.data.repository.CrudRepository;
 
 public interface UrlMappingRepository extends CrudRepository<UrlMapping, Long> {
-    Optional<UrlMapping> findByShortUrl(String shortUrl);
+    Optional<UrlMapping> findByShortenUrl(String shortUrl);
 
-    // Example: Delete a UrlMapping by its original URL
-    void deleteByOriginalUrl(String originalUrl);
+    void deleteByLongUrl(String longUrl);
 }
